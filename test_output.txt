@@ -1,0 +1,48 @@
+﻿
+============================================================
+CBSE STUDY PLANNER - AUTOMATED TESTS
+============================================================
+
+============================================================
+TEST 1: Basic Timetable Generation
+============================================================
+
+============================================================
+py : Traceback (most recent call last):
+At line:1 char:1
++ py test_app.py 2>&1 | Out-File -Encoding utf8 test_output.txt; Get-Co ...
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\vedan\.gemini\antigravity\scratch\cbse_study_planner\test_app.py", line 51, in test_basic_generation
+    print(f"\u2713 Generated {len(sessions)} sessions")
+  File "C:\Users\vedan\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vedan\.gemini\antigravity\scratch\cbse_study_planner\test_app.py", line 225, in main
+    plan = test_basic_generation()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vedan\.gemini\antigravity\scratch\cbse_study_planner\test_app.py", line 76, in test_basic_generation
+    print(f"\n\u274c TEST FAILED: {e}\n")
+  File "C:\Users\vedan\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vedan\.gemini\antigravity\scratch\cbse_study_planner\test_app.py", line 248, in <module>
+    main()
+  File "C:\Users\vedan\.gemini\antigravity\scratch\cbse_study_planner\test_app.py", line 240, in main
+    print("\u274c TESTS FAILED")
+  File "C:\Users\vedan\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
