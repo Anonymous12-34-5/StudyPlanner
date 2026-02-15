@@ -89,56 +89,7 @@ Priority = Difficulty × Weakness × Time Factor
 
 ## Building an Executable (EXE)
 
-To create a standalone Windows executable:
 
-### 1. Install PyInstaller
-
-```bash
-pip install pyinstaller
-```
-
-### 2. Build the EXE
-
-```bash
-pyinstaller --onefile --windowed --name "CBSE_Study_Planner" --icon=icon.ico main.py
-```
-
-Options explained:
-- `--onefile`: Creates a single executable file
-- `--windowed`: Hides the console window (GUI only)
-- `--name`: Name of the executable
-- `--icon`: Custom icon (optional, requires .ico file)
-
-### 3. Find Your EXE
-
-The executable will be in the `dist` folder:
-```
-dist/CBSE_Study_Planner.exe
-```
-
-### 4. Distribution
-
-You can distribute this single .exe file to anyone with Windows. They don't need Python installed!
-
-**Note**: The first run might be slow as PyInstaller unpacks files. Subsequent runs will be faster.
-
-## Project Structure
-
-```
-cbse_study_planner/
-├── main.py                 # Entry point
-├── planner/                # Core logic
-│   ├── __init__.py
-│   ├── models.py          # Data models
-│   ├── generator.py       # Timetable generation algorithm
-│   └── data_manager.py    # Save/load/export functionality
-├── ui/                     # User interface
-│   ├── __init__.py
-│   ├── app.py             # Main application window
-│   ├── input_form.py      # Input form UI
-│   └── timetable_view.py  # Timetable display UI
-└── data/                   # Saved plans (auto-created)
-```
 
 ## Tips for Best Results
 
@@ -170,3 +121,4 @@ Free to use for educational purposes.
 ## Author
 
 Built with ❤️ for CBSE students
+
